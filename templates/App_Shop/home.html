@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block body_block %}
+
+<style>
+.parent{
+  position:relative;
+  top:0;
+  left:0;
+}
+.img1{
+  margin-left:25px;
+  height:630px;
+  position:relative;
+  top:0;
+  left:0;
+}
+.img2{
+  height:600px;
+  position:absolute;
+  top:20px;
+  left:55px;
+}
+.button{
+  background:black;
+  padding:5px;
+  position:absolute;
+  bottom:70px;
+  left:250px;
+  color:white;
+}
+.button:hover{
+  color:black;
+  background:white;
+}
+
+</style>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+ <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active bg-dark"></li>
+      <li data-target="#myCarousel" data-slide-to="1" class="bg-info"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="bg-primary"></li>
+          </ol>
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" style="height: 620px; ">
+      <div class="carousel-caption">
+        <!--<a class="btn btn-ptimary"href="#" style="border: 1px solid white; border-radius: 100px; padding: 12px 35px; color:#fff; font-weight: 400; text-align: center; margin-top: -400px; margin-right: 400px; background-color: black; ">Buy medicine</a>
+           <a class="btn btn-ptimary"href="#" style="border: 1px solid white; border-radius: 100px; padding: 12px 35px; color:#fff; font-weight: 400; text-align: center; margin-top: -400px; background-color: black; ">contact us</a> -->
+            </div>
+              <img src="media/slider/lroom.jpg"class="d-block img-fluid" >
+              </div>
+    <div class="carousel-item" style="height: 620px;" >
+       <div class="carousel-caption">
+         <!--  <a class="btn btn-ptimary"href="#" style="border: 1px solid white; border-radius: 100px; padding: 12px 35px; color:#fff; font-weight: 400; text-align: center; margin-top: -400px; margin-right: 400px; background-color: #000; ">Buy medicine</a>
+           <a class="btn btn-ptimary"href="#" style="border: 1px solid white; border-radius: 100px; padding: 12px 35px; color:#fff; font-weight: 400; text-align: center; margin-top: -400px; background-color: #000; ">contact us</a> -->
+            </div>
+              <img src="media/slider/broom.jpg"class="d-block img-fluid" >
+                </div>
+
+    <div class="carousel-item" style="height: 620px;" >
+       <div class="carousel-caption">
+        <!--  <a class="btn btn-ptimary"href="#" style="border: 1px solid white; border-radius: 100px; padding: 12px 35px; color:#ffff; font-weight: 400; text-align: center; margin-top: -400px; margin-right: 400px; background-color: #000; ">Buy medicine</a>
+          <a class="btn btn-ptimary"href="#" style="border: 1px solid white; border-radius: 100px; padding: 12px 35px; color:#ffff; font-weight: 400; text-align: center; margin-top: -400px; background-color: #000; ">contact us</a> -->
+            </div>
+              <img src="media/slider/kroom.jpg"class="d-block img-fluid" >
+                </div>
+
+    <div class="carousel-item" style="height: 620px;">
+       <div class="carousel-caption">
+        <!--   <a class="btn btn-ptimary"href="#" style="border: 1px solid white; border-radius: 100px; padding: 12px 35px; color:#ffff; font-weight: 400; text-align: center; margin-top: -400px; margin-right: 400px; background-color: #000; ">Buy medicine</a>
+            <a class="btn btn-ptimary"href="#" style="border: 1px solid white; border-radius: 100px; padding: 12px 35px; color:#fff; font-weight: 400; text-align: center; margin-top: -400px; background-color: #000; ">contact us</a> -->
+            </div>
+              <img src="media/slider/kdroom.jpg"class="d-block img-fluid" >
+                </div>
+                  </div>
+  <a href="#myCarousel" class="carousel-control-prev " data-slide="prev">
+    <span class="carousel-control-prev-icon bg-info"></span></a>
+     <a href="#myCarousel" class="carousel-control-next " data-slide="next">
+       <span class="carousel-control-next-icon bg-primary"></span></a>
+        </div>
+
+<div class="container my-2">
+
+  <table>
+    <tr>
+    <td><img style="height:100%; width:430px; padding:20px;" src="media/icons/icon4.jpg" alt=""><br>
+        <h5 style="text-align:center"><b>Furniture</b></h5>
+      </td>
+      <td><img style="height:100%; width:260px;padding:20px;" src="media/icons/icon3.jpg" alt="">
+        <h5 style="text-align:center;">Sofa & Armchair</h5>
+      </td>
+      <td><img style="padding:20px;"   src="media/icons/icon1.jpg" alt="">
+        <h5 style="text-align:center;"><b>Accessories</b></h5>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+<div class="container my-2" style="margin-left:10px;">
+
+  <table>
+    <tr>
+    <td><img style="padding:20px;" src="media/icons/icon-cat-1.png" alt=""><br>
+        <h5 style="text-align:center"><b>Storage</b></h5>
+      </td>
+      <td><img style="padding:30px; margin-left:100px;" src="media/icons/icon-cat-2.png" alt=""><br>
+        <h5 style="text-align:center; margin-left:100px;"><b>Bed & Bath</b></h5>
+      </td>
+      <td><img style="padding:20px; margin-left:100px;" src="media/icons/icon-cat-3.png" alt=""><br>
+        <h5 style="text-align:center; margin-left:100px;"><b>Decor</b></h5>
+      </td>
+      <td><img style="padding:20px; margin-left:100px;" src="media/icons/icon-cat-4.png" alt=""><br>
+        <h5 style="text-align:center; margin-left:100px;"><b>Appliances</b></h5>
+      </td>
+      <td><img style="padding:20px; margin-left:120px;" src="media/icons/icon-cat-5.png" alt=""><br>
+        <h5 style="text-align:center; margin-left:120px;"><b>Kitchen</b></h5>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+<div class="container my-5">
+  <h2 class="my-5" style="text-align:center">Featured Products</h2>
+  <div class="row">
+    {% for product in object_list %}
+    <div class="col-md-6 col-md-12 col-lg-3">
+      <figure class="card card-product">
+        <div class="img-wrap">
+          <img src="/media/{{product.mainimage}}" style="width:100%; height:300px;">
+        </div>
+        <figcaption class="info-wrap">
+            <h6 class="title"><a href="{% url 'App_Shop:product_detail' pk=product.pk %}">{{product.name}}</a></h6>
+            <div class="acton-wrap">
+              <div class="price-wrap h5">
+                <span class="price-new">&#2547; {{product.price|floatformat:2}} </span>
+                <span class="price-old"><strike>&#2547; {{product.old_price|floatformat:2}}</strike></span>
+              </div>
+            </div>
+        </figcaption>
+      </figure>
+    </div>
+
+{% endfor %}
+
+  </div>
+</div>
+<div class="parent">
+
+<img  class="img1" src="media/banner/banner.jpg" alt="">
+<img class="img2" src="media/banner/banner1.png" alt="">
+<button class="button" type="button" name="buttonn">Get Started</button>
+</div>
+
+{% include 'footer.html' %}
+
+{% endblock %}

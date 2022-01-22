@@ -1,0 +1,109 @@
+{% load cart_tag %}
+{% load static %}
+
+
+
+<nav class="navabr navbar-expand-lg navbar-light bg-light">
+
+  <div class="container">
+
+    <!-- Just an image -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+          <a href="#"><img src="https://see.fontimg.com/api/renderfont4/BW0ox/eyJyIjoiZnMiLCJoIjoyMSwidyI6MTI1MCwiZnMiOjE3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/QmlzaHNhcy5jb20/aquire.png" alt="Logo fonts"></a>
+          <!--<img src="media/logo/logo.png" width="100" height="100" alt="Bishsas"> -->
+      </a>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><u><b><i class="fa fa-home">  <span>Home</span></i></b></u></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <b>Categories</b>
+        </a>
+        <div class="dropdown">
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="">Furniture</a>
+      <a class="dropdown-item" href="#">Clock</a>
+      <a class="dropdown-item" href="#">Vase</a>
+      <a class="dropdown-item" href="#">Painting</a>
+      <a class="dropdown-item" href="#">Others</a>
+    </div>
+  </div>
+      </li><br>
+
+      <li class="nav-item active">
+        <a class="navbar-brand" href="#"><b>Features</b><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-brand" href="#"><b>About us</b></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="navbar-brand" href="{% url 'App_Login:login' %}"><mark style="color:purple"><i class="fas fa-user">  <span>Login</span></i></mark></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" action="{% url 'App_Shop:searchbar' %}" method="get">
+      <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+  </nav>
+
+    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <a class="navbar-brand"  href="{% url 'App_Shop:home' %}"><img src="media/logo/logo.png" alt="Error" style="height:100px;width:100px;"></a>
+      -->
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="navbar-nav ml-auto">
+      {% if request.user.is_authenticated %}
+      <li class="nav-item">
+        <a href="{% url 'App_Order:cart' %}" class="nav-link">
+          <i class="fa fa-shopping-cart"></i>Cart
+          <span class="badge badge-light">{{ request.user | cart_total }}</span>
+        </a>
+      </li>
+
+      <li class="nav-item dropdown">
+
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-tie"></i>{{request.user.profile.username}}</a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'App_Login:profile' %}">Profile</a>
+          <a class="dropdown-item" href="{% url 'App_Payment:orders' %}">Orders</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{%  url 'App_Login:logout' %}">Logout</a>
+
+        </div>
+
+
+      </li>
+
+      {% else %}
+      <li class="nav-item">
+
+
+
+      </li>
+
+      {% endif %}
+
+    </ul>
+
+  </div>
+
+</nav>
+
+<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
